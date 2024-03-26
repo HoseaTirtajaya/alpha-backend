@@ -27,6 +27,7 @@
     "@nestjs/platform-express": "^10.0.0",
     "@nestjs/sequelize": "^10.0.1",
     "@types/fluent-ffmpeg": "^2.1.24",
+    "@wave.js/wave.js": "^1.0.1",
     "crypto-js": "^4.2.0",
     "fluent-ffmpeg": "^2.1.2",
     "node-media-server": "^2.6.2",

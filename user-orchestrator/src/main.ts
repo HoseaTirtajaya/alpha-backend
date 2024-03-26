@@ -6,6 +6,7 @@ import helmet from 'helmet';
 import { AppModule } from './app.module';
 import { ConfigurationService } from './services/config.service';
 import { RtmpService } from './providers/rtmp.provider';
+import { startServer } from './config/wavejs.config';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -23,12 +24,15 @@ async function bootstrap() {
   app.use(helmet());
 
   // Start the RTMP server
-  const rtmpService = new RtmpService();
-  rtmpService.startServer();
+  // const rtmpService = new RtmpService();
+  // rtmpService.startServer();
 
   // Start the HLS server
   // const hlsService = new HlsService();
   // hlsService.startServer('rtmp://localhost/live/stream', 'path/to/output/dir', 3202);
+
+  //Start Wave JS Server
+  startServer();
 
   await app.listen(configService.get('port'));
 }
