@@ -25,30 +25,6 @@ export class ConfigurationService {
     this.envConfig.port = process.env.PORT;
     this.envConfig.isProduction = process.env.NODE_ENV === 'Production' || process.env.NODE_ENV === 'production'
 
-    this.envConfig.apotekService = {
-      options: {
-        host: process.env.NODE_ENV === 'production' ? process.env.APOTEK_SERVICE_HOST_PROD : process.env.APOTEK_SERVICE_HOST,
-        port: process.env.APOTEK_SERVICE_PORT,
-      },
-      transport: Transport.TCP,
-    };
-
-    this.envConfig.distributorService = {
-      options: {
-        host: process.env.NODE_ENV === 'production' ? process.env.DISTRIBUTOR_SERVICE_HOST_PROD : process.env.DISTRIBUTOR_SERVICE_HOST,
-        port: process.env.DISTRIBUTOR_SERVICE_PORT,
-      },
-      transport: Transport.TCP,
-    };
-
-    this.envConfig.productService = {
-      options: {
-        host: process.env.NODE_ENV === 'production' ? process.env.DISTRIBUTOR_SERVICE_HOST_PROD : process.env.DISTRIBUTOR_SERVICE_HOST,
-        port: process.env.DISTRIBUTOR_SERVICE_PORT,
-      },
-      transport: Transport.TCP,
-    };
-
     this.envConfig.ee_api_key = process.env.ELASTICEEMAIL_KEY ?? ''
     this.envConfig.BIP_KEY = process.env.BIP_KEY ?? ''
     

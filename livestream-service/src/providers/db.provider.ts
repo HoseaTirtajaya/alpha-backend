@@ -6,7 +6,7 @@ import { SecretKeys } from './models/secret_key';
 
 export const LIVESTREAM_CONNECTION_NAME = 'LivestreamAlpha'
 
-export const farmanesiaAuthModels = [
+export const LivestreamServiceModels = [
   SecretKeys
 ]
 
@@ -18,7 +18,7 @@ const databaseProviders = [
       const configService = new ConfigurationService();
       return {
         ...configService.sequelizeOptions,
-        models: farmanesiaAuthModels,
+        models: LivestreamServiceModels,
       }
     },
   }),

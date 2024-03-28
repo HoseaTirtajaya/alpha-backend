@@ -10,7 +10,7 @@ export class LoggerService {
         private readonly config: ConfigurationService,
     ) {
         this.logger.warn(this.config.get('isProduction') ? 'Production mode' : 'Development mode')
-        this.logger.warn(`Auth-Service Running at port ${this.config.get('port')}`)
+        this.logger.warn(`Livestream-Service Running at port ${this.config.get('port')}`)
     }
 
     static create (name: string): LoggerTypes {
